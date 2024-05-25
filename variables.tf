@@ -8,6 +8,11 @@ variable "region" {
   default     = "us-east-1"
 }
 
+variable "billing_code" {
+  type        = string
+  description = "(Required) Billing code for network resources"
+}
+
 variable "prefix" {
   type        = string
   description = "(Optional) Prefix to use for all resources in this module. Default: globo-dev"
@@ -15,9 +20,9 @@ variable "prefix" {
 }
 
 variable "environment" {
-  type = string
+  type        = string
   description = "(Optional) Prefix to use for all resources in this module"
-  default = "development"
+  default     = "development"
 }
 
 variable "cidr_block" {
